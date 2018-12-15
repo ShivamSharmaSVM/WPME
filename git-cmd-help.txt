@@ -1,0 +1,14 @@
+Steps to commit after making changes:
+	
+step-1 :- Add all the changes in staging area by:
+		git add -A
+
+step-2 :- commit the changes locally by:
+		git commit -m "Commit message"
+
+step-3 : pull the changes from the remote repository(origin) to your local repository(master) :
+		git pull origin master
+
+step-4 push the changes from local repo(master) to remote repo(origin) to remote repository:
+		git push -u origin master
+
