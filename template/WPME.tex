@@ -1,24 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Dictionary
-% LaTeX Template
-% Version 1.1 (6/8/17)
-%
-% This template was downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Vel (vel@latextemplates.com) inspired by a template by Marc Lavaud
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
-
 \documentclass[10pt,a4paper,twoside]{article} % 10pt font size, A4 paper and two-sided margins
 
 \usepackage[top=2.5cm,bottom=2.5cm,left=2.0cm,right=2.0cm,columnsep=30pt]{geometry} % Document margins and spacings
@@ -45,8 +24,25 @@
 
 \newcommand{\entry}[4]{\textbf{#1}\ {(#2)}\ \textit{#3}\ $\bullet$\ \\{#4} \\ } % Defines the command to print each word on the page, \markboth{}{} prints the first word on the page in the top left header and the last word in the top right
 
+\newcommand{\appentry}[2]{\textbf{#1}\ :: {#2}}
+ 
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
 \newcommand{\chaptertitle}[2]
+	     { \section*{ \vspace*{10\baselineskip}\LARGE \textsc{\textbf{#1}} 
+		\\ [0.5cm]
+		\HRule{0.5pt} \\[0.3cm]
+		\LARGE \textbf{#2} \\
+		\HRule{2pt} \\ [0.5cm]
+		\normalsize  \vspace*{\baselineskip}}
+	     }
+\newcommand{\appchaptertitle}[2]
+	     { \section*{ \vspace*{2\baselineskip}\LARGE \textsc{\textbf{#1}} 
+		\\ [0.5cm]
+		\LARGE \textbf{#2} \\
+		\normalsize  \vspace*{\baselineskip}}
+	     }
+
+\newcommand{\atitle}[2]
 	     { \section*{ \LARGE \textsc{\textbf{#1}} 
 		\\ [0.5cm]
 		\HRule{0.5pt} \\[0.3cm]
@@ -54,18 +50,46 @@
 		\HRule{2pt} \\ [0.5cm]
 		\normalsize  \vspace*{5\baselineskip}}
 	     }
+
 \newcommand{\chapterheader}[2]{\markboth{#2}{#1}}
 %----------------------------------------------------------------------------------------
 
 \begin{document}
 
+\thispagestyle{empty}
+
+\section*{ \vspace*{10\baselineskip}
+	    \LARGE \textbf{Word Power \\ Made Easy Ref.} \\
+		}
+
+
 \setlength{\parindent}{0in}
 
-\input{section-A.tex}
 
-\input{section-B.tex}
+%----------------------------------------------------------------------------------------
+% Chapters list Starts
+%----------------------------------------------------------------------------------------
 
-%\input{section-A.tex}
+\input{Chapter_1.tex}
+
+%----------------------------------------------------------------------------------------
+% Chapters list Ends
+%----------------------------------------------------------------------------------------
+\newpage
+
+\section*{ 	\vspace*{2\baselineskip}
+		\LARGE \textbf{Appendix} \\
+		\normalsize  \vspace*{\baselineskip}}
+
+%----------------------------------------------------------------------------------------
+% Root word list Start
+%----------------------------------------------------------------------------------------
+
+\input{Appendix_Chapter_1.tex}
+
+%----------------------------------------------------------------------------------------
+% Root word list Ends
+%----------------------------------------------------------------------------------------
 
 %------------------------------------------------
 \end{document}
